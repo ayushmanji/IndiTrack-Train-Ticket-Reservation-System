@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="ISO-8859-1">
+  <title>E-Trains</title>
+  <link rel="stylesheet" href="UserHome_Css2.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f4f8;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a56db, #0f3d9b);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 1rem 0;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #fff;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+      }
+
+      .nav-menu {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .home {
+        width: 100%;
+        text-align: center;
+        margin: 0.25rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="w-full">
+    <div class="container mx-auto px-4">
+      <h1 class="hd text-center text-white text-3xl font-bold py-4">IndiTrack</h1>
+
+      <nav class="mt-4">
+        <div class="nav-container flex flex-wrap justify-center items-center">
+          <div class="nav-menu flex flex-wrap justify-center">
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="#" class="nav-link text-white hover:text-blue-200 font-medium">Home</a>
+              </p>
+            </div>
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="adminviewtrainfwd" class="nav-link text-white hover:text-blue-200 font-medium">View Trains</a>
+              </p>
+            </div>
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="adminsearchtrainfwd" class="nav-link text-white hover:text-blue-200 font-medium">Search By TrainNo</a>
+              </p>
+            </div>
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="addtrainfwd" class="nav-link text-white hover:text-blue-200 font-medium">Add Train</a>
+              </p>
+            </div>
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="cancletrainfwd" class="nav-link text-white hover:text-blue-200 font-medium">Delete Train</a>
+              </p>
+            </div>
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="updatetrain" class="nav-link text-white hover:text-blue-200 font-medium">Update Train Details</a>
+              </p>
+            </div>
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="adminlogout" class="nav-link text-white hover:text-blue-200 font-medium">Logout</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+<form class="tab" action="admincancletrain" method="post" style="border: 2px solid #ccc; padding: 1.5rem; border-radius: 10px;">
+		<label for="trainnumber">Train Number:</label>
+  <input type="text" name="trainno" id="trainnumber" style="border: 1px solid #888; padding: 8px; border-radius: 5px;"><br><br>
+		<br /> <input type="submit" value=" CANCLE TRAIN ">
+		<input type="submit" value=" CANCLE TRAIN " style="border: 1px solid #dc2626; background-color: #dc2626; color: white; padding: 8px 16px; border-radius: 5px; cursor: pointer;">
+	</form>
+	<br />
+</body>
+
+</html>

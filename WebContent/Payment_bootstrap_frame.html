@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="ISO-8859-1">
+  <title>E-Trains</title>
+  <link rel="stylesheet" href="UserHome_Css2.css">
+  <link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f4f8;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a56db, #0f3d9b);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 1rem 0;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #fff;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+      }
+
+      .nav-menu {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .home {
+        width: 100%;
+        text-align: center;
+        margin: 0.25rem 0;
+      }
+    }
+    .inlineimage {
+	max-width: 470px;
+	margin-right: 8px;
+	margin-left: 10px
+}
+
+.images {
+	display: inline-block;
+	max-width: 98%;
+	height: auto;
+	width: 22%;
+	margin: 1%;
+	left: 20px;
+	text-align: center
+}
+  </style>
+</head>
+
+<body>
+  
+	<!-- Credit Card Payment Form - START -->
+	<div class="container-fluid" style="position: fixed;">
+		<div class="row">
+			<div class="col-xs-12 col-md-5 col-md-offset-3">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="inlineimage">
+								<img class="img-responsive images"
+									src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Mastercard-Curved.png">
+								<img class="img-responsive images"
+									src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Discover-Curved.png">
+								<img class="img-responsive images"
+									src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Paypal-Curved.png">
+								<img class="img-responsive images"
+									src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/American-Express-Curved.png">
+							</div>
+						</div>
+					</div>
+					<form role="form" action="booktrains" method="post">
+						<div class="panel-body">
+
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label>CARD NUMBER</label>
+										<div class="input-group">
+											<input type="tel" class="form-control"
+												placeholder="Valid Card Number" required/> <span
+												class="input-group-addon"><span
+												class="fa fa-credit-card"></span></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-7 col-md-7">
+									<div class="form-group">
+										<label><span class="hidden-xs">EXPIRATION</span><span
+											class="visible-xs-inline">EXP</span> DATE</label> <input type="tel"
+											class="form-control" placeholder="MM / YY" required/>
+									</div>
+								</div>
+								<div class="col-xs-5 col-md-5 pull-right">
+									<div class="form-group">
+										<label>CV CODE</label> <input type="tel" class="form-control"
+											placeholder="CVC" required/>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="form-group">
+										<label>CARD OWNER</label> <input type="text"
+											class="form-control" placeholder="Card Owner Name" required/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<div class="row">
+								<div class="col-xs-12">
+									<input type="submit" value="Confirm Payment"
+										class="btn btn-success btn-lg btn-block" />
+								</div>
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+  <!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9497e70173537950',t:'MTc0ODg3NzI4Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
+

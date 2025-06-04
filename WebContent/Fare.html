@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="ISO-8859-1">
+  <title>E-Trains</title>
+  <link rel="stylesheet" href="UserHome_Css2.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f4f8;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a56db, #0f3d9b);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 1rem 0;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #fff;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+      }
+
+      .nav-menu {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .home {
+        width: 100%;
+        text-align: center;
+        margin: 0.25rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="w-full">
+    <div class="container mx-auto px-4">
+      <h1 class="hd text-center text-white text-3xl font-bold py-4">IndiTrack</h1>
+
+      <nav class="mt-4">
+        <div class="nav-container flex flex-wrap justify-center items-center">
+          <div class="nav-menu flex flex-wrap justify-center">
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="userhome" class="nav-link text-white hover:text-blue-200 font-medium">Home</a>
+              </p>
+            </div>
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="userviewtrainfwd" class="nav-link text-white hover:text-blue-200 font-medium">View Trains</a>
+              </p>
+            </div>
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="trainbwstnfwd" class="nav-link text-white hover:text-blue-200 font-medium">Trains Between
+                  Stations</a>
+              </p>
+            </div>
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="bookingdetails" class="nav-link text-white hover:text-blue-200 font-medium">Ticket Booking
+                  History</a>
+              </p>
+            </div>
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="fareenqfwd" class="nav-link text-white hover:text-blue-200 font-medium">Fare Enquiry</a>
+              </p>
+            </div>
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="useravailfwd" class="nav-link text-white hover:text-blue-200 font-medium">Seat Availability</a>
+              </p>
+            </div>
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="usersearchtrain" class="nav-link text-white hover:text-blue-200 font-medium">Search By
+                  TrainNo</a>
+              </p>
+            </div>
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="userprofile" class="nav-link text-white hover:text-blue-200 font-medium">Profile</a>
+              </p>
+            </div>
+            <div class="home px-1 sm:px-3 py-2">
+              <p class="menu">
+                <a href="userlogout" class="nav-link text-white hover:text-blue-200 font-medium">Logout</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto p-4">
+    <!-- Your content will go here -->
+  </main>
+  
+  <div class="tab">
+		<p class="menu">Fare Enquiry for Trains Between Stations</p>
+	</div>
+	<form action="fareenq" class="tab red" method="post" style="border: 2px solid #ccc; padding: 1.5rem; border-radius: 10px;">
+
+  <label for="fromstation">From Station:</label>
+  <input type="text" name="fromstation" id="fromstation" style="border: 1px solid #888; padding: 8px; border-radius: 5px;"><br><br>
+
+  <label for="tostation">To Station:</label>
+  <input type="text" name="tostation" id="tostation" style="border: 1px solid #888; padding: 8px; border-radius: 5px;"><br><br>
+
+  <input type="submit" value="Get Fare" style="border: 1px solid #dc2626; background-color: #dc2626; color: white; padding: 8px 16px; border-radius: 5px; cursor: pointer;">
+</form>
+
+	<br />
+  <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9497e70173537950',t:'MTc0ODg3NzI4Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
